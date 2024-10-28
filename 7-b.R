@@ -1,0 +1,6 @@
+x <- c(2,3,4,5,6,8)
+y <- c(53,12,46,26,90,800)
+model <- lm(y ~ x)
+summary(model)
+plot(x, y)
+abline(model, col = "red")
