@@ -1,8 +1,8 @@
-library(e1071)
-age <- c(22, 24, 30, 35, 45, 50, 60, 65)
-survived <- as.factor(c(0, 0, 0, 1, 1, 0, 1, 0))
-model <- svm(survived ~ age, kernel = "linear")
-predictions <- predict(model, data.frame(age = age))
-plot(age, as.numeric(survived), pch = 19, col = "blue", 
-     xlab = "Age", ylab = "Survival", main = "SVM Predicted Survival")
-points(age, as.numeric(predictions), pch = 4, col = "red")
+#Perform k-means clustering for the Mall Customer data set. 
+data(iris)
+set.seed(123)
+kmeans_model <- kmeans(iris[, -5], centers = 3)
+plot(iris$Sepal.Length, iris$Sepal.Width, col = kmeans_model$cluster,
+     pch = 19, 
+     main = "K-Means Clustering")
+

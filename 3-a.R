@@ -1,3 +1,4 @@
+#Perform k-means clustering for the Mall Customer data set. 
 data(iris)
 set.seed(123)
 kmeans_model <- kmeans(iris[, -5], centers = 3)

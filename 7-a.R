@@ -1,7 +1,8 @@
-library(rpart)
-age <- c(22, 24, 30, 35, 45, 50, 60, 65, 70, 75, 80, 85) 
-survived <- as.factor(c(0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0)) 
-data <- data.frame(Age = age, Survived = survived)
-model <- rpart(Survived ~ Age, data = data, method = "class", control = rpart.control(minsplit = 1))
+#Perform k-means clustering for the Mall Customer data set. 
+data(iris)
+set.seed(123)
+kmeans_model <- kmeans(iris[, -5], centers = 3)
+plot(iris$Sepal.Length, iris$Sepal.Width, col = kmeans_model$cluster,
+     pch = 19, 
+     main = "K-Means Clustering")
 
-print(model)

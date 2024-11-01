@@ -1,3 +1,4 @@
+#Write a map reduce program to count the number of words from the following paragraph.
 text <- "A Horse and an Ass were travelling together. The Horse prancing along in its fine tapping’s. The Ass carrying with difficulty the heavy weight in its panniers."
 words <- tolower(unlist(strsplit(text, "\\W+"))) 
 word_count <- table(words)
